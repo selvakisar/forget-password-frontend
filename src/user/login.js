@@ -7,7 +7,7 @@ export const Login = () => {
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
   const [successMsg, setSuccessMsg] = useState("");
-  const navigate=useNavigate()
+  const navigate = useNavigate();
   const LoginUser = async () => {
     const payload = { email, password };
 
@@ -61,10 +61,10 @@ export const Login = () => {
 
         {successMsg ? (
           <div className="badge badge-success gap-2">
-            <svg xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-              
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
               className="inline-block w-4 h-4 stroke-current"
             >
               <path
@@ -100,7 +100,7 @@ function LoginForm({ email, setEmail, password, setPassword, LoginUser }) {
           </div>
           <div>
             <label className=" justify-center p-6">
-              <div className="" >
+              <div className="">
                 <input
                   type="email"
                   placeholder="@mail.com "
@@ -141,13 +141,16 @@ function LoginForm({ email, setEmail, password, setPassword, LoginUser }) {
                 </a>
               </div>
               <div className="text-s">
-                <h1>Don't have an account <a
-                  href="/signup"
-                  className="font-medium text-purple-600 hover:text-accent-500"
-                  onClick={() => navigate("/signup")}
-                >
-              Sign up
-                </a></h1>
+                <h1>
+                  Don't have an account{" "}
+                  <a
+                    href="/signup"
+                    className="font-medium text-purple-600 hover:text-accent-500"
+                    onClick={() => navigate("/signup")}
+                  >
+                    Sign up
+                  </a>
+                </h1>
               </div>
             </div>
           </div>
@@ -157,4 +160,3 @@ function LoginForm({ email, setEmail, password, setPassword, LoginUser }) {
   );
 }
 export default Login;
-

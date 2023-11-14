@@ -33,6 +33,7 @@ function Reset() {
                 
                 />
                  <div>
+                  
         {error ? (
           <div className="font-medium text-red-600">
             <div className="badge badge-error gap-2">
