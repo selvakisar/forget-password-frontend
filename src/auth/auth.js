@@ -41,7 +41,7 @@ export async function handleReset(payload) {
   const urlSearchParams = new URLSearchParams(window.location.search);
   const token = urlSearchParams.get("token");
 
-  console.log(token);
+  
 
   const response = await fetch(`${APIauth}/resetpass/:${token}`, {
     method: "POST",
